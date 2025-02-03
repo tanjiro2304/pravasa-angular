@@ -1,0 +1,46 @@
+<div class="route-page-layout">
+  <div class="route-dropdown-layout">
+
+    <mat-form-field style="width: 100%;">
+      <mat-label>Select a Route</mat-label>
+      <mat-select (selectionChange)="onChangeListener($event)" style="width: 100%;">
+        @for (route of routes; track route) {
+          <mat-option [value]="route">{{ route.routeNo + " " + route.source + " --> " + route.destination }}
+          </mat-option>
+        }
+      </mat-select>
+
+    </mat-form-field>
+
+    <!--    <button mat-flat-button (click)="onClick()">Go</button>-->
+  </div>
+  <div class="stops-layout">
+    <table [dataSource]="halts" class="mat-elevation-z8" mat-table>
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> No.</th>
+        <td mat-cell *matCellDef="let element"> {{ element.position }}</td>
+      </ng-container>
+      <!-- Name Column -->
+      <ng-container matColumnDef="stopName">
+        <th mat-header-cell *matHeaderCellDef> Name</th>
+        <td mat-cell *matCellDef="let element"> {{ element.stopName }}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div class="route-description-layout">
+
+    <!--    <p [ngClass] = "{'color-blue':isAirConditioned,'color-red':isLimited,'color-green':isExpress }">Route No : {{ selectedRoute.routeNo }}</p>-->
+    <!--    <p>Total Distance : {{ selectedRoute.distance }} kms</p>-->
+    <!--    <p>Fare : ₹{{ selectedRoute.fare }} </p>-->
+    <!--    <p>Operated By : {{ selectedRoute.depotName }}</p>-->
+    <!--    <p [ngClass] = "{'bg-color-blue':isAirConditioned, 'bg-color-green':isExpress,'bg-color-red': isLimited, 'bg-color-black': isOrdinary}">Type:-->
+    <!--      {{ selectedRoute.routeType}}</p>-->
+  </div>
+</div>

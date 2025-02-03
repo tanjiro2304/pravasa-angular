@@ -1,0 +1,25 @@
+.main-layout {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.layout-1 {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.image-div {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.image-div:hover {
+  cursor: pointer;
+}

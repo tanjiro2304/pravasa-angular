@@ -1,0 +1,28 @@
+<div class="main-layout">
+  <div></div>
+  <div class="map-layout">
+    <label class="label-map-layout">BEST has 27 Depots across Mumbai</label>
+    <div id="map" style="height: 70% ;width: 100%;"></div>
+  </div>
+  <div class="table-layout">
+    <table>
+      <thead>
+      <tr>
+        <th>Sr. No</th>
+        <th>Depot Name</th>
+        <th>Address</th>
+        <th>Depot Code</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let depot of depots">
+        <td>{{ depot.srNo }}</td>
+        <td>{{ depot.depotName }}</td>
+        <td>{{ depot.address }}</td>
+        <td>{{ depot.depotCode }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
