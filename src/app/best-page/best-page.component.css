@@ -1,48 +1,86 @@
 .main-layout, .map-layout {
   display: flex;
   justify-content: center;
-  /*align-content: center;*/
+  align-content: center;
 }
 
 .main-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 84vh
+}
+.details-layout{
+  display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100vh
+  height:100%
 }
-
-.label-map-layout {
+.menu {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: medium;
+  font-weight: bold;
+  margin: 0;
+  background-color: #1E3A5F;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  height: 2rem;
+  justify-content: center;
+}
+.label-map-layout.header-layout {
   font-family: 'Oswald', sans-serif;
   font-size: medium;
   font-weight: bold;
 }
-
-.map-layout {
-  height: 100%;
-  width: 60%;
-  flex-direction: column;
-  padding: 15px;
-  margin: 20px;
+label{
+  padding:20px;
+  color: white;
 }
 
-label {
+label:hover{
+  cursor: pointer;
+}
+
+.map-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 70%;
+  margin:35px;
+
+}
+
+.label-map-layout{
   color: black;
 }
 
+
 .table-layout {
-  margin-top: 140px;
+  margin-top: 15px;
   display: flex;
-  width: 40%;
+  width: 30%;
   margin-left: 20px;
   margin-right: 20px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   border-collapse: collapse;
-
   color: white;
   font-family: 'Oswald', sans-serif;
+  font-size: small;
+}
 
-
+#map{
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 table {
@@ -53,5 +91,4 @@ table {
 
 th {
   text-align: start;
-
 }

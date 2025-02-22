@@ -1,28 +1,35 @@
 <div class="main-layout">
-  <div></div>
-  <div class="map-layout">
-    <label class="label-map-layout">BEST has 27 Depots across Mumbai</label>
-    <div id="map" style="height: 70% ;width: 100%;"></div>
+  <div class="menu">
+    <label [routerLink]="'route-network'">Route Network</label>
+    <label>Chalo</label>
+    <label>News</label>
   </div>
-  <div class="table-layout">
-    <table>
-      <thead>
-      <tr>
-        <th>Sr. No</th>
-        <th>Depot Name</th>
-        <th>Address</th>
-        <th>Depot Code</th>
+  <div class="details-layout">
 
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let depot of depots">
-        <td>{{ depot.srNo }}</td>
-        <td>{{ depot.depotName }}</td>
-        <td>{{ depot.address }}</td>
-        <td>{{ depot.depotCode }}</td>
-      </tr>
-      </tbody>
-    </table>
+    <div class="map-layout">
+      <div id="map" style="height: 80% ;width: 100%;"></div>
+      <label class="label-map-layout">27 Depots Across BMC jurisdiction</label>
+    </div>
+    <div class="table-layout">
+      <table>
+        <thead>
+        <tr>
+          <th>Sr. No</th>
+          <th>Depot Name</th>
+          <th>Address</th>
+          <th>Depot Code</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let depot of depots">
+          <td>{{ depot.srNo }}</td>
+          <td>{{ depot.depotName }}</td>
+          <td>{{ depot.address }}</td>
+          <td>{{ depot.depotCode }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+
 </div>

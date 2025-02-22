@@ -45,14 +45,11 @@ export class BestPageComponent implements AfterViewInit, OnInit {
       maxZoom: 19,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(this.map);
-
   }
 
   private initMarkers() {
     this.depots.forEach((depot: Depot) => {
-      console.log(depot);
       L.marker([depot.latitude, depot.longitude]).addTo(this.map);
-      console.log("Marker Added")
     })
 
   }
